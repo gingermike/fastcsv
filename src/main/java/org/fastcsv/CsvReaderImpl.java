@@ -61,7 +61,7 @@ public class CsvReaderImpl<T> implements CsvReader<T>{
 		Map<String, Integer> fieldToIndex = new HashMap<String, Integer>();
 		String[] fields = line.split(delimiter);
 		for(int i = 0; i < fields.length; i++){
-			fieldToIndex.put(fields[i], i);
+			fieldToIndex.put(fields[i].trim(), i);
 		}
 		return fieldToIndex;
 	}
